@@ -13,7 +13,7 @@ func TestEmoji(t *testing.T) {
 		{input: EyeInSpeechBubble, expected: "\U0001F441\uFE0F\u200D\U0001F5E8\uFE0F"},
 		{input: ManGenie, expected: "\U0001F9DE\u200D\u2642\uFE0F"},
 		{input: Badger, expected: "\U0001F9A1"},
-		{input: FlagForTurkey, expected: "\U0001F1F9\U0001F1F7"},
+		{input: FlagForTurkiye, expected: "\U0001F1F9\U0001F1F7"},
 	}
 
 	for i, tc := range tt {
@@ -71,8 +71,8 @@ func TestCountryFlag(t *testing.T) {
 		input    string
 		expected Emoji
 	}{
-		{input: "tr", expected: FlagForTurkey},
-		{input: "TR", expected: FlagForTurkey},
+		{input: "tr", expected: FlagForTurkiye},
+		{input: "TR", expected: FlagForTurkiye},
 		{input: "us", expected: FlagForUnitedStates},
 		{input: "gb", expected: FlagForUnitedKingdom},
 	}

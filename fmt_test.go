@@ -8,8 +8,8 @@ import (
 
 func TestSprint(t *testing.T) {
 	var (
-		input    = "I am :man_technologist: from :flag_for_turkey:. Tests are :thumbs_up:"
-		expected = fmt.Sprintf("I am %v from %v. Tests are %v", ManTechnologist, FlagForTurkey, ThumbsUp)
+		input    = "I am :man_technologist: from :flag_for_turkiye:. Tests are :thumbs_up:"
+		expected = fmt.Sprintf("I am %v from %v. Tests are %v", ManTechnologist, FlagForTurkiye, ThumbsUp)
 	)
 
 	got := Sprint(input)
@@ -33,8 +33,8 @@ func TestSprintf(t *testing.T) {
 
 func TestSprintln(t *testing.T) {
 	var (
-		input    = "I am :man_technologist: from :flag_for_turkey:. Tests are :thumbs_up:"
-		expected = fmt.Sprintf("I am %v from %v. Tests are %v\n", ManTechnologist, FlagForTurkey, ThumbsUp)
+		input    = "I am :man_technologist: from :flag_for_turkiye:. Tests are :thumbs_up:"
+		expected = fmt.Sprintf("I am %v from %v. Tests are %v\n", ManTechnologist, FlagForTurkiye, ThumbsUp)
 	)
 
 	got := Sprintln(input)
@@ -45,7 +45,7 @@ func TestSprintln(t *testing.T) {
 
 func TestPrint(t *testing.T) {
 	var (
-		input = "I am :man_technologist: from :flag_for_turkey:. Tests are :thumbs_up:"
+		input = "I am :man_technologist: from :flag_for_turkiye:. Tests are :thumbs_up:"
 	)
 
 	n, err := Print(input)
@@ -68,7 +68,7 @@ func TestPrintf(t *testing.T) {
 
 func TestPrintln(t *testing.T) {
 	var (
-		input = "I am :man_technologist: from :flag_for_turkey:. Tests are :thumbs_up:"
+		input = "I am :man_technologist: from :flag_for_turkiye:. Tests are :thumbs_up:"
 	)
 
 	n, err := Println(input)
@@ -79,8 +79,8 @@ func TestPrintln(t *testing.T) {
 
 func TestFprint(t *testing.T) {
 	var (
-		input    = "I am :man_technologist: from :flag_for_turkey:. Tests are :thumbs_up:"
-		expected = fmt.Sprintf("I am %v from %v. Tests are %v", ManTechnologist, FlagForTurkey, ThumbsUp)
+		input    = "I am :man_technologist: from :flag_for_turkiye:. Tests are :thumbs_up:"
+		expected = fmt.Sprintf("I am %v from %v. Tests are %v", ManTechnologist, FlagForTurkiye, ThumbsUp)
 	)
 
 	var w bytes.Buffer
@@ -116,8 +116,8 @@ func TestFprintf(t *testing.T) {
 
 func TestFprintln(t *testing.T) {
 	var (
-		input    = "I am :man_technologist: from :flag_for_turkey:. Tests are :thumbs_up:"
-		expected = fmt.Sprintf("I am %v from %v. Tests are %v\n", ManTechnologist, FlagForTurkey, ThumbsUp)
+		input    = "I am :man_technologist: from :flag_for_turkiye:. Tests are :thumbs_up:"
+		expected = fmt.Sprintf("I am %v from %v. Tests are %v\n", ManTechnologist, FlagForTurkiye, ThumbsUp)
 	)
 
 	var w bytes.Buffer

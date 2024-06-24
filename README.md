@@ -28,7 +28,7 @@ func main() {
 	fmt.Printf("Hello %v\n", emoji.WavingHand)
 	fmt.Printf("I am %v from %v\n",
 		emoji.ManTechnologist,
-		emoji.FlagForTurkey,
+		emoji.FlagForTurkiye,
 	)
 	fmt.Printf("Different skin tones.\n  default: %v light: %v dark: %v\n",
 		emoji.ThumbsUp,

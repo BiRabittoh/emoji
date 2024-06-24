@@ -9,7 +9,7 @@ import (
 	emojipkg "github.com/enescakir/emoji"
 )
 
-const emojiListURL = "https://unicode.org/Public/emoji/13.0/emoji-test.txt"
+const emojiListURL = "https://unicode.org/Public/emoji/15.1/emoji-test.txt"
 
 var (
 	emojiRegex = regexp.MustCompile(`^(?m)(?P<code>[A-Z\d ]+[A-Z\d])\s+;\s+(fully-qualified|component)\s+#\s+.+\s+E\d+\.\d+ (?P<name>.+)$`)

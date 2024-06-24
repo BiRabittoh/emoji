@@ -6,7 +6,6 @@ import (
 	"fmt"
 	"go/format"
 	"io"
-	"io/ioutil"
 	"net/http"
 	"os"
 	"sort"
@@ -78,7 +77,7 @@ func emojiConstant(emojis []emoji) string {
 
 		return fmt.Sprintf("%s EmojiWithTone = newEmojiWithTone(%+q) // %s\n",
 			basic.Constant, oneTonedCode, basic.Name)
-	case 26:
+	case 26, 20:
 		oneTonedCode := replaceTones(emojis[1].Code)
 		twoTonedCode := replaceTones(emojis[2].Code)
 
@@ -184,7 +183,7 @@ func fetchData(url string) ([]byte, error) {
 		return nil, fmt.Errorf("bad status: %s", resp.Status)
 	}
 
-	b, err := ioutil.ReadAll(resp.Body)
+	b, err := io.ReadAll(resp.Body)
 	if err != nil {
 		return nil, err
 	}

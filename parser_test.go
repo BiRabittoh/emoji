@@ -11,8 +11,8 @@ func TestParse(t *testing.T) {
 		expected string
 	}{
 		{
-			input:    "I am :man_technologist: from :flag_for_turkey:. Tests are :thumbs_up:",
-			expected: fmt.Sprintf("I am %v from %v. Tests are %v", ManTechnologist, FlagForTurkey, ThumbsUp),
+			input:    "I am :man_technologist: from :flag_for_turkiye:. Tests are :thumbs_up:",
+			expected: fmt.Sprintf("I am %v from %v. Tests are %v", ManTechnologist, FlagForTurkiye, ThumbsUp),
 		},
 		{
 			input:    "consecutive emojis :pizza::sushi::sweat:",
@@ -56,7 +56,7 @@ func TestParse(t *testing.T) {
 		},
 		{
 			input:    "flag testing :flag-tr: done",
-			expected: fmt.Sprintf("flag testing %v done", FlagForTurkey),
+			expected: fmt.Sprintf("flag testing %v done", FlagForTurkiye),
 		},
 		{
 			input:    "not valid flags :flag-tra: :flag-t: testing",
@@ -159,6 +159,6 @@ func TestFind(t *testing.T) {
 
 func BenchmarkParse(b *testing.B) {
 	for n := 0; n < b.N; n++ {
-		_ = Parse("I am :man_technologist: from :flag_for_turkey:. Tests are :thumbs_up:")
+		_ = Parse("I am :man_technologist: from :flag_for_turkiye:. Tests are :thumbs_up:")
 	}
 }
